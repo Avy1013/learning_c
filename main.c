@@ -20,6 +20,26 @@ long int power(){    // just a function for using maths.h functions
     w=num; //taking value for the while loop "esy"
     return power; //returning power here so i can use it in my main
 }
+int if_i_did_that(){ //note in c a "0" is considered false //ALSO IF U WANT DETAILED IF SEE PRACTICE.C
+    int year;    
+    printf("whats your lucky year: ");
+    scanf("%d",&year);
+    if (year%100==0)       //this fucked up coz 1900,2100 etc are not a leap year _why_well_idk_ exceptions!!
+    {
+        if (year%400==0){
+            printf("ahoy leap year!!😆");
+        }
+        else
+            printf("better lunk next time\n");
+    }
+    else
+        if (year%4==0){
+        printf("Ahoy leap year");
+        }
+        else    
+            printf("sorry mate u are not leaping enough!!📉\n");
+    return 0;
+}
  int main(){
    int adp=1+1+18+27;          //just power fun way to calculate
    printf("Hello world \n%d\n",adp); // hello world 
@@ -27,5 +47,6 @@ long int power(){    // just a function for using maths.h functions
    long int v = power(); // using the power function and providing value to the revnum function...   
    long int x = revnum(v); //taken from revnum.h
    printf("\nReversed num: %ld\n",x);    
+   if_i_did_that(); //a program for checking a year is a leap or not 
    return 0;
  }
