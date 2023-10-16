@@ -1,5 +1,6 @@
  #include<stdio.h>
  #include<math.h>
+ #include "revnum.h" // A way for using other program into this
 
  int w=0,num; //global variables
  
@@ -20,9 +21,11 @@ long int power(){    // just a function for using maths.h functions
     return power; //returning power here so i can use it in my main
 }
  int main(){
-    int adp=1+1+18+27;          //just power fun way to calculate
-    printf("Hello world \n%d\n",adp); // hello world 
-    conversion(); // hurray!😀 i called the function  
-    long int v = power(); // using the power function and providing value to the revnum function...   
-    return 0;
+   int adp=1+1+18+27;          //just power fun way to calculate
+   printf("Hello world \n%d\n",adp); // hello world 
+   conversion(); // hurray!😀 i called the function  
+   long int v = power(); // using the power function and providing value to the revnum function...   
+   long int x = revnum(v); //taken from revnum.h
+   printf("\nReversed num: %ld\n",x);    
+   return 0;
  }
