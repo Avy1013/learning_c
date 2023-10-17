@@ -48,14 +48,20 @@ int esy(){ //for while //Also see implementaion for while in revnum.h
 }
 return 0;
 } 
- int main(){
-   int adp=1+1+18+27;          //just power fun way to calculate
-   printf("Hello world \n%d\n",adp); // hello world 
-   conversion(); // hurray!😀 i called the function  
-   long int v = power(); // using the power function and providing value to the revnum function...   
-   long int x = revnum(v); //taken from revnum.h
-   printf("\nReversed num: %ld\n",x);    
-   if_i_did_that(); //a program for checking a year is a leap or not 
-   esy();
-   return 0;
+void doesy(){  //for do while
+ do {
+    printf("\nThis is just dumb!!");
+ }while(0>1);
+}
+int main(){
+    int adp=1+1+18+27;          //just power fun way to calculate
+    printf("Hello world \n%d\n",adp); // hello world 
+    conversion(); // hurray!😀 i called the function  
+    long int v = power(); // using the power function and providing value to the revnum function...   
+    long int x = revnum(v); //taken from revnum.h
+    printf("\nReversed num: %ld\n",x);    
+    if_i_did_that(); //a program for checking a year is a leap or not 
+    esy();
+    doesy();
+    return 0;
  }
