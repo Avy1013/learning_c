@@ -1,6 +1,7 @@
  #include<stdio.h>
  #include<math.h>
  #include "revnum.h" // A way for using other program into this
+ #include "fory.h"
 
  int w=0,num; //global variables
  
@@ -63,5 +64,6 @@ int main(){
     if_i_did_that(); //a program for checking a year is a leap or not 
     esy();
     doesy();
+    fory(); // Needs knowledge of arrays >>> to see fory2 // its a program to understand "for" see header file// fory2 should be easy 
     return 0;
  }
