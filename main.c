@@ -4,7 +4,7 @@
 
  int w=0,num; //global variables
  
- int conversion() { //this is new funtion for understanding how does the promotion and demotion of int and float value works
+int conversion() { //this is new funtion for understanding how does the promotion and demotion of int and float value works
     float nj=3.4;
     int i;
     i= nj*1;
@@ -40,6 +40,14 @@ int if_i_did_that(){ //note in c a "0" is considered false //ALSO IF U WANT DETA
             printf("sorry mate u are not leaping enough!!📉\n");
     return 0;
 }
+int esy(){ //for while //Also see implementaion for while in revnum.h
+    int  u=0;
+    while (w++<=9){ //remember post and pre increment in while....in post first it is compared and then incremented
+    printf("%dko%d\n",u,w);
+    u++;
+}
+return 0;
+} 
  int main(){
    int adp=1+1+18+27;          //just power fun way to calculate
    printf("Hello world \n%d\n",adp); // hello world 
@@ -48,5 +56,6 @@ int if_i_did_that(){ //note in c a "0" is considered false //ALSO IF U WANT DETA
    long int x = revnum(v); //taken from revnum.h
    printf("\nReversed num: %ld\n",x);    
    if_i_did_that(); //a program for checking a year is a leap or not 
+   esy();
    return 0;
  }
