@@ -1,7 +1,9 @@
- #include<stdio.h>
+ #include<stdio.h> // standard input output--preprocessor directives
  #include<math.h>
  #include "revnum.h" // A way for using other program into this
  #include "fory.h"
+ #include "image.h"
+ #include <stdlib.h> // Include this header for system
 
  int w=0,num; //global variables
  
@@ -14,7 +16,7 @@ int conversion() { //this is new funtion for understanding how does the promotio
 }
 long int power(){    // just a function for using maths.h functions
     long int power;
-    printf("enter your num: ");
+    printf("for extra learning enter'10'_Enter your num: ");
     scanf("%d",&num); //using scanf
     power=pow(9,num);  //using maths module or libraries
     printf("power =%ld",power);
@@ -51,9 +53,25 @@ return 0;
 } 
 void doesy(){  //for do while
  do {
-    printf("\nThis is just dumb!!");
+    printf("\nThis is just dumb 'do while'!!\n");
  }while(0>1);
 }
+int gf_y_or_n(){ // see the implementation with continue in odd_for
+    if (num==10){
+        char l;
+    do{
+    printf("Do you have a gf (y/n): ");
+    fflush(stdin);
+    scanf("%c",&l);
+    if (l=='n')
+        {
+           printf("Follow this guide:\nhttps://www.wikihow.com/Get-a-Girlfriend-Fast\n");
+        }
+   } while (l=='n');
+    }
+    return 0;
+}
+    
 int main(){
     int adp=1+1+18+27;          //just power fun way to calculate
     printf("Hello world \n%d\n",adp); // hello world 
@@ -65,5 +83,7 @@ int main(){
     esy();
     doesy();
     fory(); // Needs knowledge of arrays >>> to see fory2 // its a program to understand "for" see header file// fory2 should be easy 
+    gf_y_or_n(); //
+    image(num); // this was needed for the gf_y_or_n(); 
     return 0;
  }
