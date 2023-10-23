@@ -18,7 +18,7 @@ int main() {
         printf("GO TO GYM YOU MF\n");
     }
 printf("This explains a very minute yet a useful thing\n");
-printf("https://chat.openai.com/share/026abc76-f355-46c5-a092-0da1bdfe562f\n");
+printf("https://docs.google.com/document/d/1z1g-EE1WZcUFq5c_C54nuJz3CduKEndlUEIp1OUT9hU/edit?usp=sharing\n");
     return 0;
 }
 
