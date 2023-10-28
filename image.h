@@ -2,10 +2,9 @@
 #include <stdlib.h> // Include the <stdlib.h> header for system
 
 //don't forget to change the path
-void image(long int num){
-    if (num==10)
-    {
-    const char *filePath = "img.jpeg"; // Replace with the path to your file
+void image(const char *filePath){
+    
+      //= "img.jpeg"; // Replace with the path to your file
 
     // Use the system() function to open the file with the default application
     const char *command = "open ";
@@ -16,5 +15,5 @@ void image(long int num){
     printf("Hello\n");
 
     int result = system(fullCommand);
-    }   
+      
 }

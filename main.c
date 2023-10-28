@@ -57,8 +57,8 @@ void doesy(){  //for do while
  }while(0>1);
 }
 int gf_y_or_n(){ // see the implementation with continue in odd_for
-    if (num==10){
-        char l;
+    
+    char l;
     do{
     printf("Do you have a gf (y/n): ");
     fflush(stdin);
@@ -68,7 +68,7 @@ int gf_y_or_n(){ // see the implementation with continue in odd_for
            printf("Follow this guide:\nhttps://www.wikihow.com/Get-a-Girlfriend-Fast\n");
         }
    } while (l=='n');
-    }
+    
     return 0;
 }
     
@@ -83,7 +83,10 @@ int main(){
     esy();
     doesy();
     fory(); // Needs knowledge of arrays >>> to see fory2 // its a program to understand "for" see header file// fory2 should be easy 
-    gf_y_or_n(); //
-    image(num); // this was needed for the gf_y_or_n(); 
+    if (num==10)
+    {
+        gf_y_or_n(); 
+        image("images../img.jpeg"); // this was needed for the gf_y_or_n(); 
+    }
     return 0;
  }
