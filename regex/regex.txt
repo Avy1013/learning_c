@@ -1,0 +1,6 @@
+char *pattern = "^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; 
+to understand this lets see...
+1. "" these are needed little idea why but use common sense its character
+2. '^' and '$' are called anchors used in starting and ending respectively
+3. [a-zA-Z0-9._+-] quite self explanatory
+4. +@ means only one plus @ is valid //: +@+ means multiple @ are allowed 
