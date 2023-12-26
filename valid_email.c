@@ -29,11 +29,11 @@ void valid(char *email)
 }
 int regular_expression(char *email)
 {
-    char pattern[] = "{[a-zA-Z0-9._]+@+[a-zA-Z0-9._]+\\.+[a-zA-Z]{2,}}"; // regular expression
+    char *pattern = "^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; ;  // regular expression
     regex_t regi; // new data type
     int reti; // for storing the return value of regcomp
 
-    reti = regcomp(&regi, pattern, REG_EXTENDED); //compiles the regular expression
+    reti = regcomp(&regi, pattern, REG_EXTENDED); // Use REG_EXTENDED flag //compiles the regular expression
     if (reti != 0) // recomp return this value
     {
         printf("not able to compile the regex");
@@ -45,20 +45,23 @@ int regular_expression(char *email)
     //     fprintf(stderr, "Could not open file\n");
     //     return EXIT_FAILURE;
     // }
-    email[strcspn(email, "\n")] = 0; // it creates a email array [with size of strcspn]
-    if (regexec(&regi,email,0,NULL,0))
+    // email[strcspn(email, "\n")] = 0; // it creates a email array [with size of strcspn]
+
+    reti = regexec(&regi,email,0,NULL,0);
+    if (reti == 0)
     {
        printf("matched");
     }
-    else printf("not matched");
+    else {printf("not matched");}
+ regfree(&regi);
     
     return EXIT_SUCCESS;
 }
 
 int main()
 {
-    char email[250] = "Vaibhavgupta.avy@gmail.com";
+    char email[250] = "vaibhvagu@ptavy1013@gmail.com";
     puts(email);
-    //   valid(email);
+    // valid(email);
     regular_expression(email);
 }
